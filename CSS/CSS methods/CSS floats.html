@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+
+    <style>
+        img{
+            float: right;
+        }
+
+        p{ 
+            width: 50vw;
+        }
+
+        /* The image is taller than its container div therefore it overflows
+        so we create a clearfix class and set auto to its overflow property
+        hence any overflowing element will be contained. */
+        .clearfix{
+            padding-left: 10px;
+            overflow: auto;
+            overflow-x: hidden;         /* hiding horizontal scrollbar */
+        }
+
+        div{
+            border: 3px solid greenyellow;
+            max-width: 50vw;
+        }
+    </style>
+    <title>Floats</title>
+</head>
+<body>
+    <h2>Float Left</h2>
+
+    <p>In this example, the image will float to the left in the paragraph, and the text in the paragraph will wrap around the image.</p>
+    
+    <div class="clearfix">
+        <p><img src="images/img_tree.png" alt="Owl" style="width:170px;height:240px;margin-right:15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+        </p>
+    </div>
+</body>
+</html>
