@@ -1,0 +1,42 @@
+h1{
+    font-family: Helvetica;
+    text-align: center;
+}
+
+table{
+    margin: auto
+}
+
+tr{ 
+    height: 300px;
+}
+
+td{ 
+    border: 6px solid white;
+    width: 120px;
+}
+
+#one{
+    margin-right: 10px;
+    background-color: #54494B;
+}
+
+#two{
+    /* padding: 3px; */
+    background-color: #F1F7ED;
+}
+
+#three{
+    /* padding: 3px; */
+    background-color: #91C7B1;
+}
+
+#four{
+    /* padding: 3px; */
+    background-color: #B33951;
+}
+
+#five{
+    /* padding: 3px; */
+    background-color: #E3D081;
+}
