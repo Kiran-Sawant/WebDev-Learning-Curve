@@ -1,0 +1,110 @@
+/* This is a comment in CSS. */
+
+/* General format of CSS.
+
+selected Tag{
+    property: value;
+}*/
+
+h1{
+    color: rgba(118, 73, 243, 0.548);
+}
+
+li{
+    color: turquoise;
+}
+
+p{
+    color: #089595;
+}
+
+/*____________Some more CSS properties______________*/
+
+body{
+    background-color: rgb(138, 137, 137);
+}
+
+div{
+    background-color: rgb(196, 255, 255);
+    border-width: 2px;
+    border-style: groove;
+    border-color: tomato;
+}
+
+p{
+    color: yellow;
+}
+
+span{
+    font-style: italic;
+}
+
+/*___________________CSS selectors____________________*/
+/* https://www.w3schools.com/cssref/css_selectors.asp */
+/* Selecting elements with classes */
+.first_div{
+    color: red;
+}
+
+.second_div{
+    color: violet;
+}
+
+/* Selecting elements with ID's */
+#singledout{
+    color: green;
+    text-decoration: line-through;
+}
+
+/* Selecting all elements */
+*{
+    color: black;
+}
+
+/* Selecting decendents */
+/* all <a> inside lists at any nesting level*/
+li a{
+    color: blue;
+}
+
+
+/* Selecting parents of child */
+/* selecting all p elements in a list but not the nested ones*/
+li > p{
+    text-decoration: underline;
+}
+
+/* Selecting Adjecent neighbours */
+/* Selects the first ul element that are placed immediately after h3 elements */
+h3 + ul{
+    border: 2px dotted purple;
+}
+
+/* Selecting tags with specific attributes */
+li a[href='https://www.zerohedge.com/']{
+    color: red;
+    border: 1px solid orange;
+}
+
+/*_______________Specificity_________________*/
+/* https://www.w3schools.com/css/css_specificity.asp */
+/* Specificity is the hirarchy of how the design elements are applied 
+if 5 elements are of same type of which 3 are of same class and 1's ID is specified
+then the styling of ID will be prefered over class & class over general tags.
+Hierarchy: Inline-styles > IDs > Classes, attributes > Elements, * */
+
+*{
+    color: cyan;
+}
+
+li{
+    color: red;
+}
+
+.Second{
+    color: blue;
+}
+
+#two{
+    color: chartreuse;
+}
