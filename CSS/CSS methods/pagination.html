@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <style>
+
+        .centered{
+            text-align: center;
+        }
+        /* for pagination <div> */
+        .pagination{
+            display: inline-block;
+            
+        }
+
+        /* all anchors in pagination <div> */
+        .pagination a{
+            color: black;           /* text color */
+            float: left;              /* arranging them on the left of page */
+            padding: 8px 16px;        
+            text-decoration: none;    /* removing underline */
+            border: 1px solid grey;
+            margin: 0px 4px;
+        }
+
+        .pagination a.active{
+            background-color: greenyellow;
+            color: black;
+        }
+
+        .pagination a:hover:not(.active){
+            background-color: lightgray;
+        }
+    </style>
+    <title>Paginations</title>
+</head>
+<body>
+    <h1>Simple Pagination</h1>
+    <div class="centered">
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+</body>
+</html>
