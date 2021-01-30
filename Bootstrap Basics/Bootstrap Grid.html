@@ -1,0 +1,79 @@
+<!-- Bootstrap splits the available screen space into 12 available columns.
+    You can use any combination of numbers adding up to 12 to define how
+    elements will takeup the space ie. 4 elements with 3 coluns each or
+    2 elements occupying 6 columns each, etc. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid</title>
+    <!-- Bootstrap4.6 CSS only link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .boxy{
+            background-color: #b3ddff;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- row class initiates a Grid -->
+        <div class="row">
+            <!-- There are 3 elements that are needed to be equally divided among 12 rows
+            col-lg-4 means when screen is large give this element 4 columns below which
+            the elements will stack -->
+            <div class="col-lg-4 boxy">Col large 4</div>
+            <div class="col-lg-4 boxy">Col large 4</div>
+            <div class="col-lg-4 boxy">Col large 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- col-md-6 means until screen is medium or more give this element 6 columns
+            below which the elements will stack -->
+            <div class="col-md-6 boxy">Col medium 6</div>
+            <div class="col-md-6 boxy">Col medium 6</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- col-sm-6 means until screen is small or more give this element 6 columns
+            below which the elements will stack -->
+            <div class="col-sm-6 boxy">Col Small 6</div>
+            <div class="col-sm-6 boxy">Col Small 6</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- when screen is large give it 3 columns, when its small give 6, below that
+            stack em all. -->
+            <div class="col-lg-3 col-sm-6 boxy">One</div>
+            <div class="col-lg-3 col-sm-6 boxy">Two</div>
+            <div class="col-lg-3 col-sm-6 boxy">Three</div>
+            <div class="col-lg-3 col-sm-6 boxy">Four</div>
+        </div>
+    </div>
+
+    <!-- Nested grid -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 boxy">
+                <!-- Nesting a grid inside a row element that occupies 6 columns -->
+                <div class="row">
+                    <!-- 6 columns of nested grid = 3 columns of main grid -->
+                    <div class="col-md-6 boxy">Nest One</div>
+                    <div class="col-md-6 boxy">Nest One</div>
+                </div>
+            </div>
+            <div class="col-lg-6 boxy">
+                Second row
+            </div>
+        </div>
+    </div>
+</body>
+</html>
