@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Sandbox</title>
+</head>
+<body>
+    <ul id="people"></ul>
+    <script>
+        var person = {
+            name: "Kiran",
+            age: 23,
+            address: {
+                street: "Ranjana Keshe Chaal",
+                city: "Boston"
+            },
+            children: ["404 Not Found", "lol"]
+        }
+
+        jPerson = JSON.stringify(person)            // converting javascript to JSON string
+        person = JSON.parse(jPerson)                // converting JSON to javascript
+
+        // Creating a javascript array
+        var people = [
+            {
+                name: "Kiran",
+                age: 23
+            },
+            {
+                name: "Brad",
+                age: 35
+            },
+            {
+                name: "John",
+                age: 40
+            }
+        ];
+
+        var output = ""
+        for(var i = 0;i < people.length;i++)
+        {
+            // console.log(people[i].name);
+            output += "<li>"+people[i].name+"</li>"
+        }
+        document.getElementById('people').innerHTML = output;
+    </script>
+</body>
+</html>
