@@ -1,0 +1,56 @@
+body{
+    text-align: center;
+    background-color: rgb(18, 18, 36);
+    border: solid turquoise 40px;
+    border-top: 0px;
+    /* my solution
+    border-left: solid turquoise 40px;
+    border-right: solid turquoise 40px;
+    border-bottom: solid turquoise 40px; */
+    margin: 0px;
+}
+
+h1, h2{
+    color: white;
+    font-family: 'VeranoSansRegular';
+    font-weight: normal;
+    font-style: normal; 
+}
+
+label{
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+}
+
+p{  
+    color: white;
+    font-family: 'GothicaBookOblique';
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+form{
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"]{
+    width: 30%;
+    height: 35px;
+    align-self: center;
+    margin-top: 3px;
+}
+
+button{
+    height: 80px;
+    width: 140px;
+    font-size: 20px;
+    color: black;
+    background-color: orange;
+    align-self: center;
+    margin-top: 10px;
+    border-radius: 21px;
+}
