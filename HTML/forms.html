@@ -1,0 +1,33 @@
+<html lang="en">
+<!-- All form input types: https://www.w3schools.com/html/html_form_input_types.asp -->
+
+<head>
+    <style>
+        input{width: 20vw;}
+    </style>
+    <title>Forms</title>
+</head>
+<body>
+
+    <form action="index.html" method="POST">
+        <h1>Log In</h1>
+        <h2>Please input your E-mail & Password</h2>
+        
+        <!-- type defines the type of HTML input -->
+        <!-- value defines the default value in it -->
+        <!-- name defines the identifier(var name) of the input -->
+        <!-- <br> is a self-closing break-line tag moves next tag to next line-->
+        <!-- <hr> defines a thematic break in an HTML page, and is displayed as a horizontal ilne.-->
+        <!-- <fieldset> gives a frame & legend gives it the label -->
+        <fieldset style="width: 20vw;">
+            <legend>Input Field</legend>
+            <input type="email" name="User_email" value="E-mail Here"><br>
+            <hr>
+            <input type="password" name="User_password" value="Password"><br>
+            <hr>
+            <input type="submit" value="Click Me">
+        </fieldset>
+    </form>
+
+</body>
+</html>

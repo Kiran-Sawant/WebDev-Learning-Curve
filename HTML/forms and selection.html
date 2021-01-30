@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title>Hotel Feedback</title>
+</head>
+<body>
+    <h1>Hotel Feedback Form</h1>
+    <form action="">
+        <h2>Are you from US? or an outsider?</h2>
+        <!--set same name for related radio buttons-->
+        <label for="out">Outside: </label>
+        <input type="radio" name="loc" id="out">
+
+        <label for="in">Inside: </label>
+        <input type="radio" name="loc" id="in">
+
+        <h2>How was our service?</h2>
+        <select name="stars">               <!--selection is for dropdown list-->
+            <option value="3">Good</option> <!--option for items in dropdown-->
+            <option value="2">Average</option>
+            <option value="1">Bad</option>
+        </select>
+
+        <h2>Any Other feedback</h2>
+
+        <textarea name="feedback" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
