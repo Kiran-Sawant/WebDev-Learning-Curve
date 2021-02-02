@@ -7,6 +7,7 @@
 <body>
     <ul id="people"></ul>
     <script>
+        // creating javascript object
         var person = {
             name: "Kiran",
             age: 23,
@@ -17,7 +18,7 @@
             children: ["404 Not Found", "lol"]
         }
 
-        jPerson = JSON.stringify(person)            // converting javascript to JSON string
+        jPerson = JSON.stringify(person)            // converting javascript object to JSON string
         person = JSON.parse(jPerson)                // converting JSON to javascript
 
         // Creating a javascript array
