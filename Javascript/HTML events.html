@@ -1,0 +1,29 @@
+<!-- https://www.w3schools.com/js/js_events.asp -->
+
+<html lang="en">
+<head>
+    <title>Events</title>
+</head>
+<body>
+    <script>
+        function changeColor() {
+            document.getElementById("one").style.color = "red"
+        }
+    
+        function changeColor2() {
+            this.style.color = "Blue"
+        }
+    
+        function upper() {
+            this.innerHTML = "Change"
+        }
+    </script>
+    <h1 onclick="changeColor" id="one">On click text</h1>
+
+    <h1 onmouseover="changeColor2" onmouseout="changeColor()">On Mouse Over</h1>
+
+    <h1 onload="upper"></h1>
+
+
+</body>
+</html>
