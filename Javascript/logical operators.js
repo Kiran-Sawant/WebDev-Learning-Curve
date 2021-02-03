@@ -27,9 +27,17 @@
 
 // behavior with NaN, undefined and NaN 
 null == undefined;  // true
-NaN == NaN;        // false (One non-number might not be equal to another non-number)
+NaN == NaN;         // false (One non-number might not be equal to another non-number)
 
 // and & or operator
 
 1 == "1" && 2 == "2";           // and operator
 1 == "12" || 2 == "2";          // or operator
+
+// Ternary Operator (?)
+// A conditional operator that assigns a value to a variable based on some condition.
+// Syntax: var = (some condition) ? 
+
+age = Number(prompt("Enter age")) ? "Value if true":"Value if false"
+
+var votable = (age < 18) ? "Too Young":"Old Enough"
