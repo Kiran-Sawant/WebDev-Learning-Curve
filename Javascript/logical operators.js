@@ -36,8 +36,8 @@ NaN == NaN;         // false (One non-number might not be equal to another non-n
 
 // Ternary Operator (?)
 // A conditional operator that assigns a value to a variable based on some condition.
-// Syntax: var = (some condition) ? 
+// Syntax: var = (some condition) ? "Value if true":"Value if false"
 
-age = Number(prompt("Enter age")) ? "Value if true":"Value if false"
+age = Number(prompt("Enter age"))
 
 var votable = (age < 18) ? "Too Young":"Old Enough"
