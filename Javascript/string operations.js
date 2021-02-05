@@ -3,6 +3,9 @@
 // string concatination
 "Django" + "Is return in python"
 
+// String formatting new in (ES6)
+var dateString = `Todays date is ${new Date().getDate()}`
+
 // indexing
 // indexing starts with 0 & includes spaces.
 var k = "JavaScript"
