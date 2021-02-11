@@ -1,0 +1,17 @@
+// https://www.w3schools.com/jsref/dom_obj_event.asp
+
+1. The onload and onunload Events
+   The onload and onunload events are triggered when the user enters or leaves
+   the page.
+
+2. The onchange Event
+   The onchange event is often used in combination with validation of input fields.
+
+3. The onmouseover and onmouseout Events
+   Used when mouse hovers over or hovers out of the element.
+
+4. The onmousedown, onmouseup and onclick Events
+   The onmousedown, onmouseup, and onclick events are all parts of a mouse-click.
+   First when a mouse-button is clicked, the onmousedown event is triggered, then,
+   when the mouse-button is released, the onmouseup event is triggered, finally, when
+   the mouse-click is completed, the onclick event is triggered.
