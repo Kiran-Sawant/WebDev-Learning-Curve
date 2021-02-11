@@ -1,0 +1,44 @@
+<!-- The getElementsByTagName() method returns an HTMLCollection object.
+An HTMLCollection object is an array-like list (collection) of HTML elements.
+The following code selects all <p> elements in a document:
+cannot use array methods like valueOf(), pop(), push(), or join() on an HTMLCollection. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+</head>
+<body>
+    <ol id="one">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>foru</li>
+        <li>five</li>
+        <li>six</li>
+    </ol>
+
+    <ol id="two">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <script>
+        var collection = document.getElementsByTagName("li")
+        // console.dir(collection[0])
+
+        // looping over HTML collection object
+        for (i=0; i < collection.length; i+=2) {
+            collection[i].style.color = 'red'
+        }
+
+        for (i=1; i < collection.length; i+=2) {
+            collection[i].style.color = 'green'
+        }
+    </script>
+</body>
+</html>
