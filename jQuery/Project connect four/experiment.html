@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+    <style>
+        h1, h2, h3{
+            text-align: center;
+        }
+
+        td{
+            border: solid black 3px;
+            border-radius: 70px;
+            background-color: darkgrey;
+            margin-right: 5px;
+            text-align: center;
+        }
+
+        .red{
+            background-color: #ff7474;
+        }
+
+        .blue{
+            background-color: #00e1ff;
+        }
+    </style>
+    <title>Connect Four</title>
+</head>
+<body>
+    <h1 class="2">Welcome to Connect Four!</h1>
+    <h2>The Objective of this game is to connect four of your chips in a row!</h2>
+    <h3 id="turn">Let's get started!</h3>
+    <br>
+    <table align="center" style="width: 700px; height: 600px;">
+        <tr>
+            <td id="0"></td>
+            <td id="1"></td>
+            <td id="2"></td>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+            <td id="6"></td>
+        </tr>
+        <tr>
+            <td id="7"></td>
+            <td id="8"></td>
+            <td id="9"></td>
+            <td id="10"></td>
+            <td id="11" ></td>
+            <td id="12"></td>
+            <td id="13"></td>
+        </tr>
+        <tr>
+            <td id="14"></td>
+            <td id="15"></td>
+            <td id="16"></td>
+            <td id="17"></td>
+            <td id="18"></td>
+            <td id="19"></td>
+            <td id="20"></td>
+        </tr>
+        <tr>
+            <td id="21"></td>
+            <td id="22"></td>
+            <td id="23"></td>
+            <td id="24"></td>
+            <td id="25"></td>
+            <td id="26"></td>
+            <td id="27"></td>
+        </tr>
+        <tr>
+            <td id="28"></td>
+            <td id="29"></td>
+            <td id="30"></td>
+            <td id="31"></td>
+            <td id="32"></td>
+            <td id="33"></td>
+            <td id="34"></td>
+        </tr>
+        <tr>
+            <td id="35"></td>
+            <td id="36"></td>
+            <td id="37"></td>
+            <td id="38"></td>
+            <td id="39"></td>
+            <td id="40"></td>
+            <td id="41"></td>
+        </tr>
+    </table>
+    <!-- Javascript -->
+    <script src="main.js"></script>
+</body>
+</html>
