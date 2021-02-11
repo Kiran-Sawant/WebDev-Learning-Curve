@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- parent -->
+    <div id="div1">
+        <!-- Childs -->
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+      </div>
+      
+      <script>
+        var para = document.createElement("p");                 // Creating HTML tag
+        var text = document.createTextNode("This is new.");     // Creating content for tag
+        para.appendChild(text);                                 // adding content to tag
+        
+        var element = document.getElementById("div1");          // getting parent
+        var child = document.getElementById("p1");              // getting successive child
+
+
+        // insert our created paragraph before existing paragraph in parent
+        element.insertBefore(para, child);
+      </script> 
+</body>
+</html>
