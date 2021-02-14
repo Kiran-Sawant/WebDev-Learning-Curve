@@ -1,7 +1,6 @@
 var playerOne = prompt("Player One enter your name, you will be Blue.")
 var playerTwo = prompt("Player Two enter your name, you will be Red.")
 
-
 var state = "blue";
 
 $('h3').text(`${playerOne}: it is your turn, please pick a column to drop your blue chip.`)
