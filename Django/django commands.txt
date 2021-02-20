@@ -1,0 +1,23 @@
+# start a django Project.
+django-admin startproject project_name
+
+# create an app inside of a project.
+python manage.py startapp app_name
+
+# Start the development server locally.
+python manage.py runserver
+
+# Shutdown development server from command-line.
+Ctrl + c
+
+# migrating the defined models.
+python manage.py migrate
+
+# migrating the models defined in the apps.
+python manage.py makemigrations app_name
+
+# Creating admin.
+python manage.py createsuperuser 
+
+# Running the Django shell.
+python manage.py shell
