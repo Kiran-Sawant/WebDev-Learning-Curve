@@ -1,0 +1,3 @@
+The media folder contains static files uploded by the user,
+unlike static folder that contains website specific files
+that are uploaded by the developer.
