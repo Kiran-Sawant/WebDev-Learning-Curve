@@ -84,18 +84,29 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
+PASSWORD_HASHERS = [
+    # Our installed hashers.
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    # django inbuilt hashers.
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+]
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
+    {   # Checks if inserted password if too similar to user name.
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
-    {
+    {   # Checks if the password is above a minimum length.
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        # inserting minimum lenth.
+        'OPTIONS': {'min_length': 8}
     },
-    {
+    {   # Checks if the password if too common.
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
-    {
+    {   # Checks if password contains numbers or not.
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
