@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 4.6 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+    <title>Form Page</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <!-- calling all form elements as <p> -->
+            <!-- all the fields defined in our django form will be nested in <p> -->
+            {{ form.as_p }}
+
+            <input type="submit" value="Submit" class="btn btn-primary">
+
+            <!-- required token for protection against Cross-site Request Forgery -->
+            {% csrf_token %}
+        </form>
+    </div>
+</body>
+</html>
