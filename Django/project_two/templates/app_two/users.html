@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <h1>Here are Your Users: </h1>
+
+    {% if access_records %}
+    <ol>
+        {% for info in access_records %}
+            <li>User info</li>
+            <ul>
+                <li>First Name: {{ info.first_name }}</li>
+                <li>Last Name: {{ info.last_name }}</li>
+                <li>Email: {{ info.email }}</li>
+            </ul>
+        {% endfor %}
+    </ol>
+    {% else %}
+        <h1 style="color: red;">No user records found!</h1>
+    {% endif %}
+</body>
+</html>
