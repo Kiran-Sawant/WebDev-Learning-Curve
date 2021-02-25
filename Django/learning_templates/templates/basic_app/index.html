@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- <html lang="en">
+<head>
+    <title>index page</title>
+</head>
+<body>
+    <h1>Welcome to index page.</h1>
+</body>
+</html> -->
+
+{% extends "basic_app/base.html" %}
+    {% block body_block %}
+        <h1>Welcome to Index</h1>
+        <h1>This is index.html page showing.</h1>
+
+        <!-- using our custom filter on text and passing it a arg. -->
+        <h1>{{ text|cut:'hello'}}</h1>
+        <!-- using built-in filter 'add' and passing it arg 69-->
+        <h1>{{ number|add:"69" }}</h1>
+        
+    {% endblock %}
