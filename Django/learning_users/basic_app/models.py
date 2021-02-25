@@ -15,5 +15,5 @@ class UserProfileInfo(models.Model):
 
     def __str__(self):
         """return value will be displayed in the admins model registry.
-        This class extends the built-in user moedel & username is declared in it."""
+        This class extends the built-in User model & username is declared in it."""
         return self.user.username
