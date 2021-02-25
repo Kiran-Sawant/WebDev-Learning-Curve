@@ -1,4 +1,4 @@
-"""learning_users URL Configuration
+"""project_two URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -14,13 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from basic_app import views
+from django.urls import path
+from app_two import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+
+    path('', views.home),
+    path('signup/', views.sign_up),
+    path('users/', views.users),
+    path('help/', views.help),
     path('admin/', admin.site.urls),
-    path('basic_app/', include('basic_app.urls')),
-    path('logout/', views.user_logout, name='logout'),
-    path('special/', views.special, name='special'),
 ]
