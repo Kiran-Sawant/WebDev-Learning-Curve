@@ -3,6 +3,7 @@ django-admin startproject project_name
 
 # create an app inside of a project.
 python manage.py startapp app_name
+django-admin startapp app_name
 
 # Start the development server locally.
 python manage.py runserver
