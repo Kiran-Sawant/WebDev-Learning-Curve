@@ -1,4 +1,4 @@
-// Switch case is used for strict comparisons/Specific comparison.
+// Switch case is used for strict/Specific comparison.
 // switch keyword is followed by a parenthesis that containes a value to compare, it can be a variable or a statement.
 // following code block contains multiple case keywords followed by exact possible values of the variable passed.
 // If the case matches, the code block in that case is executed, and program breaks out of the switch block.
@@ -27,6 +27,7 @@ switch (age) {
 console.log(votable)
 
 //________________Example_2:________________//
+// We can make multiple cases to use same code block.
 var text
 
 // here, Date().getDay() returns a Number between 0~6:
@@ -41,22 +42,5 @@ switch (new Date().getDay()) {
       break;
     default:
       text = "Looking forward to the Weekend";
-}
-
-//____________________Example_3_____________________//
-// We can make multiple cases to use same sode block.
-
-var txt
-
-switch (new Date().getDay()) {
-    case 4:
-    case 5:
-      txt = "Soon it is Weekend";
       break;
-    case 0:
-    case 6:
-      txt = "It is Weekend";
-      break;
-    default:
-      txt = "Looking forward to the Weekend";
 }
