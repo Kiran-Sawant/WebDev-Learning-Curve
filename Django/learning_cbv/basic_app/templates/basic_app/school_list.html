@@ -1,0 +1,18 @@
+{% extends "basic_app/basic_app_base.html" %}
+
+{% block body_block %}
+    <div class="jumbotron">
+        <h1 class="h1">Welcome to a list of all the Schools!</h1>
+
+        <ol>
+            {% for school in schools %}
+                <!-- .id is the default primary-key if no primary-key is given to the Model -->
+                <h2 class="h2"><li><a href="{{ school.id }}">{{ school.name }}</a></li></h2>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <button class="btn btn-primary bg-success">
+        <a href="{% url 'basic_app:create' %}" style="color: black;">Add</a>
+    </button>
+{% endblock %}
