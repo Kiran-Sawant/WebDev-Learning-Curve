@@ -1,0 +1,26 @@
+{% extends 'basic_app/basic_app_base.html' %}
+{% block body_block %}
+    <div class="jumbotron">
+        <h1 class="h1">Welcome to schools detail page</h1>
+        <h2>School details: </h2>
+
+        <p>Name: {{ school_detail.name }}</p>
+        <p>Principal: {{ school_detail.principal }}</p>
+        <p>Location: {{ school_detail.location }}</p>
+        <h3> Students: </h3>
+        <!-- students is related_name of foreign key in the student model-->
+        <!-- This will return all the instances of students that have this school in their foreign key column. -->
+        {% for student in school_detail.students.all %}
+            <p>Name: {{student.name}}, age: {{student.age}} year old.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Update & delete Button -->
+    <div class="container-fluid">
+        <a href="{% url 'basic_app:student' %}"><button class='btn btn-info'>Add Student</button></a>
+
+        <a href="{% url 'basic_app:update' pk=school_detail.pk %}"><button class="btn btn-warning ml-2">Update</button></a>
+
+        <a href="{% url 'basic_app:delete' pk=school_detail.pk %}"><button class='btn btn-danger ml-2'>Delete</button></a>
+    </div>
+{% endblock %}
