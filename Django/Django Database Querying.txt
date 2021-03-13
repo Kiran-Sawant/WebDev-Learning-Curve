@@ -1,0 +1,12 @@
+# Returns all the fields of a Model.
+Model._meta.get_fields()
+
+# returns all the instances of the Model.
+Model.objects.all()
+
+# returns all the instances that satisfies the passed condition.
+Model.objects.filter(field_name)
+
+# retruns all the instances excluding the instances that pass the condition.
+Model.objects.exclude()
+
