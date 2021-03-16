@@ -1,0 +1,58 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<br><br><br><br>
+
+<h1 class="posttitle loader">{{ post.title }}</h1>
+{% if post.published_date %}            <!--If post is published-->
+    <div class="date postdate">
+        {{ post.published_date }}
+    </div>
+{% else %}
+    <a  class="btn btn-primary" href="{% url 'blog:post_publish' pk=post.pk %}">Publish</a>
+{% endif %}
+    <p class='postcontent'>{{ post.text|safe|linebreaksbr }}</p>
+
+{% if user.is_authenticated %}
+    <!-- Edit Button -->
+    <a class="btn btn-primary" href="{% url 'blog:post_update' pk=post.pk %}">
+        <span>Edit</span>
+    </a>
+    <!-- Delete Button -->
+    <a class="btn btn-primary" href="{% url 'blog:post_remove' pk=post.pk %}">
+        <span>Delete</span>
+    </a>
+{% endif %}
+
+    <hr>
+    <a class='btn btn-primary' href="{% url 'blog:post_comment' pk=post.pk %}">Comment</a>
+
+    <!-- Comments list -->
+    <div class='container'>
+        {% for comment in post.comments.all %}
+            <br>
+            {% if user.is_authenticated or comment.approve_comment %}  <!-- If comment is approved -->
+                {{ comment.create_date }}
+                    {% if not comment.approve_comment %}               <!-- If comment is not approved -->
+                        <!-- delete comment -->
+                        <a class="btn btn-default" href="{% url 'blog:comment_remove' pk=comment.pk %}">
+                            <span class="glyphicon glyphicon-remove">Remove</span>
+                        </a>
+                        <!-- Approve comment -->
+                        <a class="btn btn-primary" href="{% url 'blog:comment_approve' pk=comment.pk %}">
+                            <span class="glyphicon glyphicon-ok">Approve</span>
+                        </a>                
+                    {% endif %}
+
+                    <p>{{ comment.text|safe|linebreaks }}</p>
+                    <p>Posted By: {{ comment.author }}</p>
+                    
+                    <hr>
+            {% endif %}
+
+            {% empty %}     <!-- If no comments found -->
+            <p>No Comments!</p>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
