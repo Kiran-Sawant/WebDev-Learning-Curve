@@ -16,15 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as au_views
-from blog.views import (PostList)
+from blog.views import (PostList, AboutView, DraftListView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Home page redirect
-    path('', include('blog.urls', namespace='blog')),
-    
-    # path('post/', include('blog.urls', namespace='blog')),
-    # Authorization views
+    path('', PostList.as_view(), name='post_list'),                                 # Home page
+    path('post/', include('blog.urls', namespace='blog')),                          # App URLs redirect
+    path('about/', AboutView.as_view(), name='about'),                              # About page
+    path('drafts/', DraftListView.as_view(), name='post_draft_list'),               # Draft List
+    #_________________Authorization views_________________#
     path('accounts/login/', au_views.LoginView.as_view(), name='login'),
     path('accounts/logout/', au_views.LogoutView.as_view(), name='logout', kwargs={'next_page': ''}),
 ]
