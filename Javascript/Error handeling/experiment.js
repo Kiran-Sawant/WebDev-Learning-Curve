@@ -23,7 +23,7 @@ function getMonthName(mo) {
   }
   catch (e) {                          // here, e is string @ line 17
     monthName = 'unknown';
-    logMyErrors(e);                    // pass exception object to error Logger
+    //logMyErrors(e);                    // pass exception object to error Logger
   }
   finally{
       console.log("Month is " + monthName)
