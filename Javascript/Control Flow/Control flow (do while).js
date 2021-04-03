@@ -11,7 +11,7 @@ while (k<500)
 
 console.log(k)
 
-// Here, the block is executed at least once.
+// Here, the do block is executed first and then while checks the condition.
 var k2 = 600
 
 do{
@@ -19,4 +19,4 @@ do{
 }
 while (k<500)
 
-console.log(k)
+console.log(k2)
