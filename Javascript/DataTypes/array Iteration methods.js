@@ -75,7 +75,7 @@ var fruits = ["Apple", "Banana", "Chikoo", "Gwava", "Orange", "Apple"]
 
 fruits.indexOf("Apple")
 
-// returns the index of first occurence of passed value
+// returns the index of last occurence of passed value
 fruits.lastIndexOf("Apple")
 
 //________________________ .find()_________________________________//

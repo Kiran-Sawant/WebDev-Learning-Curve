@@ -18,13 +18,13 @@ shift = fruits.shift()
 // pushes the passed value to the start.
 fruits.unshift("Orange")
 
-// repalaces the value at passed index with assigned value
+// replaces the value at passed index with assigned value
 fruits[0] = "Grapes"
 
-// .splice() inserts the passed values 1+ from the passed index.
+// .splice() inserts the passed values from the passed index.
 // it takes index to start after, number of values to remove, new values.
 // .splice() modifies the original array
-// code below will add "Guawa" & "Tomato" after "Apple"
+// code below will add "Guawa" & "Tomato" after "Apple", without removing any previous values.
 fruits.splice(2, 0, "Guawa", "Tomato")
 
 // .splice method can also be used to remove values.

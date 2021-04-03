@@ -3,7 +3,9 @@
 countries = ['USA', 'Ching-Chong', 'Germany']
 
 // replacing value at 1st index position with new value.
+// Indexing starts from 0.
 countries[1] = "Corona"
+console.log(countries)
 
 // array with mixed datatype
 var mixed = [true, 20, "strnig"]
