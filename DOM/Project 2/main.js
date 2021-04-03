@@ -12,7 +12,7 @@ filter.addEventListener('keyup', filterItems)
 // Add Item. Here e is element on which the event is added.
 function addItem(e) {
     // prevents submit buttons to reload pages.
-    e.prevent   Default()
+    e.preventDefault()
     
     // Get input value
     var newItem = document.getElementById('item').value;
