@@ -22,7 +22,9 @@ class Car {
   
 // Creating Car instance
 let myCar = new Car("Ford");
-// Resetting _carname attribute
+
+// Resetting _carname attribute (setter)
 myCar.carname = "Volvo";
-// accessing _carname attribute
+
+// accessing _carname attribute (getter)
 console.log(myCar.carname);
