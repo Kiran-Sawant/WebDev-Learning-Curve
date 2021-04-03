@@ -94,14 +94,18 @@
     <!-- Javascript -->
     <script defer type="text/javascript">
         // Required for Django CSRF with AJAX
-        function getCookie(name) {
+        function getCookie(name)
+        {
             let cookieValue = null;
-            if (document.cookie && document.cookie !== '') {
+            if (document.cookie && document.cookie !== '')
+            {
                 const cookies = document.cookie.split(';');
-                for (let i = 0; i < cookies.length; i++) {
+                for (let i = 0; i < cookies.length; i++)
+                {
                     const cookie = cookies[i].trim();
                     // Does this cookie string begin with the name we want?
-                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    if (cookie.substring(0, name.length + 1) === (name + '='))
+                    {
                         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                         break;
                     }
@@ -118,7 +122,8 @@
         buildList()
 
         // function to render the list from fetched JSON data
-        function buildList(){
+        function buildList()
+        {
             var wrapper = document.getElementById('list-wrapper')
             // wrapper.innerHTML = ''
 
@@ -131,16 +136,22 @@
 
                 var list = data             // assigining array of objects to var list.
 
-                for (var i in list){
+                for (var i in list)
+                {
 
-                    try{
-                        document.getElementById(`data-row-${i}`).remove()}
-                    catch(err){
+                    try
+                    {
+                        document.getElementById(`data-row-${i}`).remove()
+                    }
+                    catch(err)
+                    {
+                        // pass
                     }
 
                     var title = `<span class='title'>${list[i].title}</span>`
 
-                    if (list[i].completed == true){     // if user clicks on a task title, after its completed.
+                    if (list[i].completed == true)      // if user clicks on a task title, after its completed.
+                    {
                         title = `<strike class='title'>${list[i].title}</strike>`
                     }
 
@@ -166,45 +177,49 @@
                     // editBtn.addEventListener('click', () => {editItem()})
                 }
 
-                if(list_snapshot.length > list.length){
-                    for(var i = list.length; i < list_snapshot.length; i++){
+                if(list_snapshot.length > list.length)
+                {
+                    for(var i = list.length; i < list_snapshot.length; i++)
+                    {
                         document.getElementById(`data-row-${i}`).remove()
                     }
                 }
-
+                
+                // Savign a state of the list before editing it.
                 list_snapshot = list
 
                 // creating edit, delete and strick buttons for every list item.
-                for (var i in list){
+                for (var i in list)
+                {
                     var editBtn = document.getElementsByClassName('edit')[i]
                     var deleteBtn = document.getElementsByClassName('delete')[i]
                     var title = document.getElementsByClassName('title')[i]
 
                     // Adding eventListner to edit button
-                    editBtn.addEventListener('click', ((item) => {
-                            return () => {editItem(item)}
-                            })
-                        (list[i])       // saving the state after the event occurance
+                    editBtn.addEventListener('click', ((item) =>
+                            {
+                                return () =>{editItem(item)}
+                            })(list[i])       // saving the state after the event occurance
                     )
 
                     // Adding eventListner to delete button
-                    deleteBtn.addEventListener('click', ((item) => {
-                            return () => {deleteItem(item)}
-                            })
-                        (list[i])
+                    deleteBtn.addEventListener('click', ((item) =>
+                            {
+                                return () => {deleteItem(item)}
+                            })(list[i])
                     )
 
                     // Adding eventListner to delete button
-                    title.addEventListener('click', ((item) => {
-                            return () => {strick(item)}
-                            })
-                        (list[i])
+                    title.addEventListener('click', ((item) => 
+                            {
+                                return () => {strick(item)}
+                            })(list[i])
                     )
                 }
             })
         }
 
-        // Adding event listner to form submissions.
+        // Adding event listner to form submission button.
         var form = document.getElementById('form-wraper')
         form.addEventListener('submit', function(e){
             e.preventDefault()    // prevents default behaviour of reload page on submit.
