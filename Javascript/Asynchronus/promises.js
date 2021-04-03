@@ -27,6 +27,7 @@ function getPost() {
 // Producing Code
 function createPost(post){
     // Creating a promise object
+    // Here, resolve is the function defined in .then() and reject is defined in .catch()
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
             posts.push(post)
