@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class UserProfileInfo(models.Model):
-    """A class that extends the in-built User model of django."""
+    """A class that extends the built-in User model of django."""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 

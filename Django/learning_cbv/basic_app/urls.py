@@ -5,7 +5,7 @@ app_name = 'basic_app'
 
 urlpatterns = [
     path('', views.SchoolListView.as_view(), name='list'),
-    # pk for primary key is an attribute od DetailView
+    # pk for primary key is an attribute of DetailView
     # SchoolDetailView will receive a pk and return detail view of instance with that id
     re_path(r"^(?P<pk>[\d]+)$", views.SchoolDetailView.as_view(), name='detail'),
     path('student/', views.studentFormView.as_view(), name='student'),

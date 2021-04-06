@@ -18,7 +18,7 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
 
-@login_required()
+@login_required
 def special(request):
     """A view that requires user login."""
     return HttpResponse("You are logged in!")
@@ -71,7 +71,7 @@ def user_login(request):
 
         user = authenticate(request, username=user_name, password=password)
 
-        if user:
+        if user:                # If authenticate passes a User instance.
             if user.is_active:
                 # loggs-in the user
                 login(request, user)
@@ -80,7 +80,7 @@ def user_login(request):
             else:
                 return HttpResponse("Account Inactive")
         
-        else:
+        else:                   # If authenticate doesn't pass a User instance.
             print("Someone tried to login & Failed")
             return HttpResponse('Invalid Login details!')
 

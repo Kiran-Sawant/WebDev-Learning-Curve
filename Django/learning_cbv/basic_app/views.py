@@ -45,7 +45,7 @@ class IndexView(TemplateView):
 
 #__________________________ListView_________________________________#
 """List views are used to display a list of Model objects. e.g. A feed of blog post
-summaries made by a user."""
+summaries, writen by a user."""
 
 class SchoolListView(ListView):
     """By default the class will return a list named school_list"""
@@ -77,7 +77,8 @@ class SchoolDetailView(DetailView):
 
 
 #________________________FormView__________________________________#
-
+"""A FormView is used to render a form, It takes a Form/ModelForm instance, template_name
+and a success_url to redirect to after submission."""
 class studentFormView(FormView):
 
     form_class = forms.StudentForm
@@ -85,6 +86,7 @@ class studentFormView(FormView):
     success_url = reverse_lazy('basic_app:list')
 
     def form_valid(self, form):
+        """A superclass method to check form validation"""
         form.save()
         return super().form_valid(form)
 
@@ -117,9 +119,10 @@ class SchoolUpdateView(UpdateView):
 # DeleteView____________________________#
 """DeleteView requires a success_url attribute, that defines where to
 redirect if delete operation is a success, here we redirect to school
-list after a school is deleted."""
+list after a school is deleted. It also expects a confirmation page template
+in local templates directory by the name 'modelname_confirm_delete.html'(all lowercase)"""
 # A note on reverse_lazy() method
-"""In Python, functions are not executed on import; classes are. Therefore while using CBVs
+"""In Python, functions & methods are not executed on import; classes are. Therefore while using CBVs
 one should use reverse_lazy() method while assigning success_url attribute outside a method,
 or else the URLs will be resolved the moment the views file is imported to the urls file and
 not when a call for that view(SchoolDeleteView) is made, if so the view will always return a

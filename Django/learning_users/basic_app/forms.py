@@ -12,6 +12,7 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ('username', 'email', 'password')
 
+# Custom Form
 class UserProfileInfoForm(forms.ModelForm):
 
     class Meta():

@@ -3,7 +3,7 @@
 from django import template
 
 # Creating an instance of Library class.
-# It is used to register our custom created filters and template tags.
+# It is used to register our custom filters and template tags.
 register = template.Library()
 
 # registering using decorators.

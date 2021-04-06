@@ -30,6 +30,11 @@ class PostDetailView(DetailView):
 
 
 class CreatePostView(LoginRequiredMixin, CreateView):
+    """A view foor creating Posts.
+    The view requires Login, therefore LoginRequiredMixin is used
+    login_url: URL to redirect if user is not logged in.
+    redirect_field_name: redirect path after login."""
+
     login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
 
@@ -72,6 +77,8 @@ class DraftListView(LoginRequiredMixin, ListView):
 
 @login_required
 def post_publish(request, pk):
+    """A view for publishing the posts in Draft."""
+
     post = get_object_or_404(models.Post, pk=pk)
     post.publish()
     print('published')
@@ -83,9 +90,11 @@ def post_publish(request, pk):
 
 @login_required
 def add_comment_to_post(request, pk):   # pk will be passed by comment button.
-    post = get_object_or_404(models.Post, pk=pk)
+    """A view for adding comment."""
 
-    if request.method == 'POST':        # If a comment is sunmmited.
+    post = get_object_or_404(models.Post, pk=pk)        # gets the instance of passed Model with passed pk
+
+    if request.method == 'POST':        # If a comment is submmited.
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)

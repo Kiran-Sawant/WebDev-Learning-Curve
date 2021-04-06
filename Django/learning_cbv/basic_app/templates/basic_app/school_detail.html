@@ -8,7 +8,7 @@
         <p>Principal: {{ school_detail.principal }}</p>
         <p>Location: {{ school_detail.location }}</p>
         <h3> Students: </h3>
-        <!-- students is related_name of foreign key in the student model-->
+        <!-- students is the related_name of foreign key in the student model-->
         <!-- This will return all the instances of students that have this school in their foreign key column. -->
         {% for student in school_detail.students.all %}
             <p>Name: {{student.name}}, age: {{student.age}} year old.</p>
