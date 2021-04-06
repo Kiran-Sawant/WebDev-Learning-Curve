@@ -47,8 +47,9 @@ function removeItem(e) {
     }
 }
 
+// Search function.
 function filterItems(e) {
-    // convert to
+    // convert to lowercse
     var text = e.target.value.toLowerCase();
     // get li
     var items = itemList.getElementsByTagName('li');
